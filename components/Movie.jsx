@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "../styles/Movie_card.module.scss";
 
 export default function Movie({ movie }) {
+  console.log(movie);
   return (
     <div className={styles.card}>
       <Link href={`/${movie.id}`}>
@@ -14,7 +15,7 @@ export default function Movie({ movie }) {
       </Link>
       <div className={styles.footer}>
         <span> IMDb: {movie.vote_average}</span>
-        <a href="https://www.imdb.com/" target="_blank"><button>Vote ({movie.vote_count})</button></a>
+        <span>{movie.release_date.slice(0, 4)}</span>
       </div>
     </div>
   );

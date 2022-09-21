@@ -3,6 +3,7 @@ import Head from "next/head";
 import styles from "../styles/Movie.module.scss";
 
 export default function MovieDetail(props) {
+  console.log(props);
   return (
     <>
       <Head>
@@ -19,7 +20,7 @@ export default function MovieDetail(props) {
             <h2>{props.title}</h2>
             <p>{props.overview}</p>
             <ul>
-              <li>Release date: {props.release_date.slice(0, 4)}</li>
+              <li><a href={`https://imdb.com/title/${props.imdb_id}`} target="_blank">Vote ({props.vote_count})</a></li>
               <li>Runtime: {props.runtime} mins</li>
             </ul>
           </div>
