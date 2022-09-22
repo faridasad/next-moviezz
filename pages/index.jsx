@@ -4,6 +4,7 @@ import Movie from "../components/Movie";
 import styles from "../styles/Home.module.scss";
 
 export default function Home(props) {
+
   return (
     <>
 
@@ -27,7 +28,15 @@ export async function getServerSideProps() {
     `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}&language=en-US&page=1`
   );
 
+  const ids = []
+  result.data.results.forEach(movie => {
+    ids.push(movie.id);
+  });
+
   return {
-    props: result.data,
+    props: {
+      results: result.data.results,
+      ids: ids,
+    }
   };
 }
