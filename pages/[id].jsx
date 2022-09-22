@@ -3,7 +3,6 @@ import Head from "next/head";
 import styles from "../styles/Movie.module.scss";
 
 export default function MovieDetail(props) {
-  console.log(props);
   return (
     <>
       <Head>

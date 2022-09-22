@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "../styles/Movie_card.module.scss";
 
 export default function Movie({ movie }) {
-  console.log(movie);
+
   return (
     <div className={styles.card}>
       <Link href={`/${movie.id}`}>

@@ -19,6 +19,30 @@
         align-items: center;
         gap: 2rem;
 
+        button {
+            background-color: rgb(252, 227, 87);
+            color: #2b2d2f;
+            padding: .5rem 1rem;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(252, 227, 87, .8);
+        }
+
+        button:disabled {
+            background-color: rgb(255, 240, 158);
+        }
+
+        button:disabled:hover {
+            cursor: not-allowed;
+        }
+
+        
+
+
+
         li {
             list-style: none;
             font-weight: 500;
